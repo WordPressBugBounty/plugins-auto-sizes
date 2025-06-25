@@ -6,9 +6,11 @@
  * @since 1.0.0
  */
 
+// @codeCoverageIgnoreStart
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+// @codeCoverageIgnoreEnd
 
 /**
  * Displays the HTML generator tag for the plugin.
@@ -39,4 +41,4 @@ add_filter( 'the_content', 'auto_sizes_prime_attachment_caches', 9 ); // This mu
 add_filter( 'render_block_core/image', 'auto_sizes_filter_image_tag', 10, 3 );
 add_filter( 'render_block_core/cover', 'auto_sizes_filter_image_tag', 10, 3 );
 add_filter( 'get_block_type_uses_context', 'auto_sizes_filter_uses_context', 10, 2 );
-add_filter( 'render_block_context', 'auto_sizes_filter_render_block_context', 10, 2 );
+add_filter( 'render_block_context', 'auto_sizes_filter_render_block_context', 10, 3 );
